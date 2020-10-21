@@ -53,40 +53,16 @@ matrix:
     sudo: true # for setcap so we can run the tests in chroot.
     compiler: clang
     dist: bionic
-  - os: linux
-    arch: ppc64le
-    sudo: true # for setcap so we can run the tests in chroot.
-    compiler: gcc
-    dist: bionic
-  - os: linux
-    arch: ppc64le
-    sudo: true # for setcap so we can run the tests in chroot.
-    compiler: clang
-    dist: bionic
   - os: osx
     before_install:
       - brew update
       - brew install lzo asciidoc docbook-xsl gdb ccache libarchive expect telnet util-linux gnu-getopt
   - os: linux
-    arch: amd64
     sudo: true # for setcap so we can run the tests in chroot.
     compiler: clang
     env: VALGRIND=1
     dist: bionic
   - os: linux
-    arch: amd64
-    sudo: true # for setcap so we can run the tests in chroot.
-    compiler: clang
-    env: BUILD_TYPE=ubsan
-    dist: bionic
-  - os: linux
-    arch: ppc64le
-    sudo: true # for setcap so we can run the tests in chroot.
-    compiler: clang
-    env: VALGRIND=1
-    dist: bionic
-  - os: linux
-    arch: ppc64le
     sudo: true # for setcap so we can run the tests in chroot.
     compiler: clang
     env: BUILD_TYPE=ubsan
